@@ -5,12 +5,16 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
 
+
 @Entity
-@Table(name = "message")
+@Table(name = "chat")
 @Data
-public class Message {
+public class Chat {
 
     @Id
-    private long messageId;
+    private long chatId;
+
+
+
 
 }
