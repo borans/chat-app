@@ -1,8 +1,7 @@
 package com.example.chatapp.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
@@ -12,5 +11,21 @@ public class Message {
 
     @Id
     private long messageId;
+
+    // MANY-TO-ONE REL. BETWEEN MANY MESSAGES TO ONE USER
+    @ManyToOne
+    @JoinColumn(name = "userId", referencedColumnName = "userId")
+    @JsonBackReference
+    private User user;
+
+
+
+    // MANY-TO-ONE REL. BETWEEN MANY MESSAGES TO ONE CHAT
+    @ManyToOne
+    @JoinColumn(name = "chatId", referencedColumnName = "chatId")
+    @JsonBackReference
+    private Chat chat;
+
+
 
 }
