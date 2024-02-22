@@ -27,12 +27,27 @@ public class Chat {
     private Set<Message> chatMessages;
 
 
+    public long getChatId() {
+        return chatId;
+    }
 
+    public Set<User> getUsers() {
+        return users;
+    }
 
+    public Set<Message> getChatMessages() {
+        return chatMessages;
+    }
 
+    public void setChatId(long chatId) {
+        this.chatId = chatId;
+    }
 
+    public void setUsers(Set<User> users) {
+        this.users = users;
+    }
 
-
-
-
+    public void setChatMessages(Set<Message> chatMessages) {
+        this.chatMessages = chatMessages;
+    }
 }

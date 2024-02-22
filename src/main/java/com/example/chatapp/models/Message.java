@@ -26,6 +26,27 @@ public class Message {
     @JsonBackReference
     private Chat chat;
 
+    public long getMessageId() {
+        return messageId;
+    }
 
+    public User getUser() {
+        return user;
+    }
 
+    public Chat getChat() {
+        return chat;
+    }
+
+    public void setMessageId(long messageId) {
+        this.messageId = messageId;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void setChat(Chat chat) {
+        this.chat = chat;
+    }
 }

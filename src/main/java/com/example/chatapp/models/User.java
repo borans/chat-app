@@ -14,7 +14,7 @@ import java.util.Set;
 public class User {
 
     @Id
-    private Long userId;
+    private long userId;
 
     private String userName;
 
@@ -37,7 +37,37 @@ public class User {
     private Set<Message> userMessages;
 
 
+    public long getUserId() {
+        return userId;
+    }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public Set<Chat> getChats() {
+        return chats;
+    }
+
+    public Set<Message> getUserMessages() {
+        return userMessages;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public void setChats(Set<Chat> chats) {
+        this.chats = chats;
+    }
+
+    public void setUserMessages(Set<Message> userMessages) {
+        this.userMessages = userMessages;
+    }
 
 
 
